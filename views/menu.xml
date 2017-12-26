@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_finance_periodical_processing" name="Periodic Processing" parent="account.menu_finance" sequence="13"/>
+        <menuitem id="menu_account_end_year_treatments"
+            name="End of Period" parent="menu_finance_periodical_processing"
+            sequence="25"/>
+        <!-- periods -->
+        <menuitem id="next_id_23" name="Periods" parent="account.menu_finance_configuration" sequence="5" />
+        <menuitem id="menu_action_account_fiscalyear" action="action_account_fiscalyear" parent="next_id_23"/>
+        <menuitem id="menu_action_account_period" action="action_account_period" parent="next_id_23"/>
+
+
+        <menuitem
+            action="action_account_period_tree"
+            id="menu_action_account_period_close_tree"
+            parent="menu_account_end_year_treatments"
+            sequence="0"/>
+
+        <menuitem action="action_account_fiscalyear_close_state"
+            id="menu_wizard_fy_close_state"
+            sequence="20"
+            parent="menu_account_end_year_treatments" />
+    </data>
+</odoo>
